@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+}
+
+body {
+    padding-top: 56px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Navbar uchun yangi stillar */
+/* ESKI KODLARNI O'CHIRIB TASHLANG */
+/* Navbar asosiy stillari */
+.navbar {
+    background-color: #000 !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+/* Navbar linklari uchun */
+.navbar .nav-link {
+    color: white !important;
+    margin: 0 12px;
+    position: relative;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+/* Active link uchun */
+.navbar .nav-link.active {
+    color: white !important;
+    font-weight: 600;
+}
+
+/* Hover effekti */
+.navbar .nav-link:hover {
+    color: #f8f9fa !important;
+    transform: translateY(-2px);
+}
+
+/* Hover paytida pastki chiziq */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+/* Navbar brand uchun */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+/* Toggler tugmasi uchun */
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* Body uchun padding qo'shamiz */
+body {
+    padding-top: 80px;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+section {
+    padding: 80px 0;
+}
+
+#skills .card {
+    border-radius: 10px;
+}
+
+#contact .card {
+    border-radius: 15px;
+}
+
+.profile-img {
+    max-width: 300px;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .profile-img {
+        margin-top: 30px;
+        max-width: 200px;
+    }
+}
